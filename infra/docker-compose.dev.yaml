@@ -1,0 +1,23 @@
+name: projectco
+
+services:
+  projectco-postgres:
+    image: postgres:16.3
+    platform: linux/arm64
+    restart: unless-stopped
+    environment:
+      TZ: Asia/Seoul
+      POSTGRES_USER: musoftware
+      POSTGRES_PASSWORD: unknown_password
+      POSTGRES_DB: projectco-db
+    ports:
+    - 15432:5432
+
+  projectco-redis:
+    image: redis:latest
+    platform: linux/arm64
+    restart: unless-stopped
+    environment:
+      TZ: Asia/Seoul
+    ports:
+    - 16379:6379
