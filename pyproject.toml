@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "projectCo"
+version = "0.0.1"
+description = ""
+authors = ["MU-Software <musoftware@mudev.cc>"]
+homepage = "https://projectco.mudev.cc"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.109.0"
+pydantic = "^2.7.1"
+redis = {version = "^5.0.4", extras = ["hiredis"]}
+SQLAlchemy = {extras = ["greenlet"], version = "^2.0.30"}
+uvicorn = "^0.27.1"
+gunicorn = "^22.0.0"
+alembic = {extras = ["tz"], version = "^1.13.1"}
+python-dotenv = "^1.0.1"
+eventlet = "^0.34.3"
+celery = {extras = ["redis", "sqlalchemy", "tblib"], version = "^5.4.0"}
+pydantic-settings = "^2.2.1"
+passlib = "^1.7.4"
+argon2-cffi = "^23.1.0"
+psycopg = {extras = ["binary"], version = "^3.1.19"}
+typer = "^0.9.0"
+python-dateutil = "^2.9.0.post0"
+flower = "^2.0.1"
+ipython = "^8.24.0"
+toml = "^0.10.2"
+email-validator = "^2.1.1"
+pyjwt = "^2.8.0"
+user-agents = "^2.2.0"
+typing-extensions = "^4.11.0"
+python-multipart = "^0.0.9"
+sentry-sdk = {extras = ["celery", "fastapi", "sqlalchemy"], version = "^2.1.1"}
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
